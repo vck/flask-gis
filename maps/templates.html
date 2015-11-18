@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1> flask google maps </h1>
+<h2> google maps ur long-lang and GIS </h2>
+{% with %}
+
+    {% set location=(-23.599097,-46.675903) %}
+    {% set style="width:500px;height:500px;"%}
+
+        {{
+        googlemap(
+        "simple-map",
+        location.0, location.1,
+        markers=[location,],
+        style=style
+        )
+    }}
+
+{% endwith %}
+</body>
+</html>
+
